@@ -1,6 +1,6 @@
 === CoinPays Payment Gateway WooCommerce - iFrame API ===
 Contributors: flysquare
-Tags: CoinPays, checkout, ödeme, WooCommerce, sanal pos, crypto
+Tags: CoinPays, checkout, ödeme, WooCommerce, crypto
 Stable tag: 1.0.0
 Requires at least: 4.4
 Requires PHP: 5.6
