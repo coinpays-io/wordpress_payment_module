@@ -1,14 +1,14 @@
 <?php
 /**
- * Plugin Name: CoinPays WooCommerce - iFrame API
- * Plugin URI: https://wordpress.org/plugins/coinpays-woocommerce-iframe-api/
+ * Plugin Name: CoinPays Payment Gateway - iFrame API
+ * Plugin URI: https://wordpress.org/plugins/coinpays-payment-gateway-iframe-api/
  * Description: The infrastructure required to receive payments through WooCommerce with your CoinPays membership.
  * Version: 1.0.0
  * Author: CoinPays Payment Gateway
  * Author URI: http://coinpays.io/
  * License: GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:coinpays-woocommerce-iframe-api
+ * Text Domain:coinpays-iframe-api
  * Domain Path: /languages
  */
 

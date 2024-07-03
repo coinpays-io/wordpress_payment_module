@@ -64,7 +64,7 @@ class CoinPaysCoreClass
         }
 
         $merchant['currency'] = strtoupper(get_woocommerce_currency());
-        $merchant['user_basket'] = base64_encode(json_encode($user_basket));
+        $merchant['user_basket'] = base64_encode(wp_json_encode($user_basket));
         $hash_str = $config['coinpays_merchant_id'] . $merchant['user_ip'] . $merchant['merchant_oid'] . $merchant['email'] . $merchant['payment_amount'] . $merchant['user_basket'];
         $coinpays_token = base64_encode(hash_hmac('sha256', $hash_str . $config['coinpays_merchant_salt'], $config['coinpays_merchant_key'], true));
         $post_data = array(
@@ -203,24 +203,6 @@ class CoinPaysCoreClass
         }
 
         return $cat_tree;
-    }
-
-    public function getLanguages()
-    {
-        $curl = curl_init();
-        curl_setopt_array($curl, array(
-            CURLOPT_URL => $this->url . "/shared/languages",
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_ENCODING => "",
-            CURLOPT_MAXREDIRS => 10,
-            CURLOPT_TIMEOUT => 0,
-            CURLOPT_FOLLOWLOCATION => true,
-            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-            CURLOPT_CUSTOMREQUEST => "GET",
-        ));
-        $response = curl_exec($curl);
-        curl_close($curl);
-        return json_decode($response, true);
     }
 
     public function catSearchProd($category_id = 0)
